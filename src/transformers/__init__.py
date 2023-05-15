@@ -196,13 +196,6 @@ _import_structure = {
         "Blip2QFormerConfig",
         "Blip2VisionConfig",
     ],
-    "models.instructblip": [
-        "INSTRUCTBLIP_PRETRAINED_CONFIG_ARCHIVE_MAP",
-        "InstructBlipConfig",
-       
-        "InstructBlipQFormerConfig",
-        "InstructBlipVisionConfig",
-    ],
     "models.bloom": ["BLOOM_PRETRAINED_CONFIG_ARCHIVE_MAP", "BloomConfig"],
     "models.bort": [],
     "models.bridgetower": [
@@ -330,6 +323,12 @@ _import_structure = {
     "models.ibert": ["IBERT_PRETRAINED_CONFIG_ARCHIVE_MAP", "IBertConfig"],
     "models.imagegpt": ["IMAGEGPT_PRETRAINED_CONFIG_ARCHIVE_MAP", "ImageGPTConfig"],
     "models.informer": ["INFORMER_PRETRAINED_CONFIG_ARCHIVE_MAP", "InformerConfig"],
+    "models.instructblip": [
+        "INSTRUCTBLIP_PRETRAINED_CONFIG_ARCHIVE_MAP",
+        "InstructBlipConfig",
+        "InstructBlipQFormerConfig",
+        "InstructBlipVisionConfig",
+    ],
     "models.jukebox": [
         "JUKEBOX_PRETRAINED_CONFIG_ARCHIVE_MAP",
         "JukeboxConfig",
@@ -1221,16 +1220,6 @@ else:
             "Blip2VisionModel",
         ]
     )
-    _import_structure["models.instructblip"].extend(
-        [
-            "INSTRUCTBLIP_PRETRAINED_MODEL_ARCHIVE_LIST",
-            "InstructBlipForConditionalGeneration",
-            "InstructBlipModel",
-            "InstructBlipPreTrainedModel",
-            "InstructBlipQFormerModel",
-            "InstructBlipVisionModel",
-        ]
-    )
     _import_structure["models.bloom"].extend(
         [
             "BLOOM_PRETRAINED_MODEL_ARCHIVE_LIST",
@@ -1820,6 +1809,16 @@ else:
             "InformerForPrediction",
             "InformerModel",
             "InformerPreTrainedModel",
+        ]
+    )
+    _import_structure["models.instructblip"].extend(
+        [
+            "INSTRUCTBLIP_PRETRAINED_MODEL_ARCHIVE_LIST",
+            "InstructBlipForConditionalGeneration",
+            "InstructBlipModel",
+            "InstructBlipPreTrainedModel",
+            "InstructBlipQFormerModel",
+            "InstructBlipVisionModel",
         ]
     )
     _import_structure["models.jukebox"].extend(
@@ -3991,13 +3990,6 @@ if TYPE_CHECKING:
         Blip2QFormerConfig,
         Blip2VisionConfig,
     )
-    from .models.instructblip import (
-        INSTRUCTBLIP_PRETRAINED_CONFIG_ARCHIVE_MAP,
-        InstructBlipConfig,
-       
-        InstructBlipQFormerConfig,
-        InstructBlipVisionConfig,
-    )
     from .models.bloom import BLOOM_PRETRAINED_CONFIG_ARCHIVE_MAP, BloomConfig
     from .models.bridgetower import (
         BRIDGETOWER_PRETRAINED_CONFIG_ARCHIVE_MAP,
@@ -4120,6 +4112,12 @@ if TYPE_CHECKING:
     from .models.ibert import IBERT_PRETRAINED_CONFIG_ARCHIVE_MAP, IBertConfig
     from .models.imagegpt import IMAGEGPT_PRETRAINED_CONFIG_ARCHIVE_MAP, ImageGPTConfig
     from .models.informer import INFORMER_PRETRAINED_CONFIG_ARCHIVE_MAP, InformerConfig
+    from .models.instructblip import (
+        INSTRUCTBLIP_PRETRAINED_CONFIG_ARCHIVE_MAP,
+        InstructBlipConfig,
+        InstructBlipQFormerConfig,
+        InstructBlipVisionConfig,
+    )
     from .models.jukebox import (
         JUKEBOX_PRETRAINED_CONFIG_ARCHIVE_MAP,
         JukeboxConfig,
@@ -4899,14 +4897,6 @@ if TYPE_CHECKING:
             Blip2QFormerModel,
             Blip2VisionModel,
         )
-        from .models.instructblip import (
-            INSTRUCTBLIP_PRETRAINED_MODEL_ARCHIVE_LIST,
-            InstructBlipForConditionalGeneration,
-            InstructBlipModel,
-            InstructBlipPreTrainedModel,
-            InstructBlipQFormerModel,
-            InstructBlipVisionModel,
-        )
         from .models.bloom import (
             BLOOM_PRETRAINED_MODEL_ARCHIVE_LIST,
             BloomForCausalLM,
@@ -5383,6 +5373,14 @@ if TYPE_CHECKING:
             InformerForPrediction,
             InformerModel,
             InformerPreTrainedModel,
+        )
+        from .models.instructblip import (
+            INSTRUCTBLIP_PRETRAINED_MODEL_ARCHIVE_LIST,
+            InstructBlipForConditionalGeneration,
+            InstructBlipModel,
+            InstructBlipPreTrainedModel,
+            InstructBlipQFormerModel,
+            InstructBlipVisionModel,
         )
         from .models.jukebox import (
             JUKEBOX_PRETRAINED_MODEL_ARCHIVE_LIST,
