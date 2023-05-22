@@ -1717,6 +1717,8 @@ class UdopForConditionalGeneration(UdopPreTrainedModel):
 
         # Initialize weights and apply final processing
         self.post_init()
+        
+        self.model_parallel = False
 
     def get_input_embeddings(self):
         return self.shared
